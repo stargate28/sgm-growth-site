@@ -966,7 +966,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
 </script>
 <script>
 (function(){
-  var CRM = 'https://crm.cerramarhomes.com', KEY = 'sgm-growth-solutions';
+  var CRM = 'https://crm.sgmgrowth.com', KEY = 'sgm-growth-solutions';
   var root = document.getElementById('pf'); if (!root) return;
   function es(){ return document.documentElement.lang === 'es'; }
   function t(o){ return typeof o === 'string' ? o : (es() ? o.es : o.en); }
@@ -1321,7 +1321,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
              consent: f.consent.checked, website: f.website.value};
     if (!d.name || !(d.phone || d.email)) { say('Please add your name and a phone number or email.', 'Agrega tu nombre y un teléfono o correo.', 'err'); return; }
     btn.disabled = true; say('Sending...', 'Enviando...');
-    fetch('https://crm.cerramarhomes.com/api/widget/sgm-growth-solutions/lead', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(d)})
+    fetch('https://crm.sgmgrowth.com/api/widget/sgm-growth-solutions/lead', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(d)})
       .then(function(r){ if (!r.ok) throw new Error(r.status); f.reset();
         say("Thanks! Dereck will reach out shortly.", "¡Gracias! Dereck te contactará pronto.", 'ok'); })
       .catch(function(){ say('Something went wrong. Please call or text (407) 495-2217.', 'Algo salió mal. Llama o envía un texto al (407) 495-2217.', 'err'); })
@@ -1329,6 +1329,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
   });
 })();
 </script>
-<script src="https://crm.cerramarhomes.com/widget.js" data-key="sgm-growth-solutions" data-color="#1F3A5F" defer></script>
+<script src="https://crm.sgmgrowth.com/widget.js" data-key="sgm-growth-solutions" data-color="#1F3A5F" defer></script>
 </body>
 </html>
